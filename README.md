@@ -1,54 +1,45 @@
-# Advanced Face Mask Detection System 🎭
+Here's a well-structured **README.md** file for your **Face Mask Detection System** project. You can upload this on GitHub to give a professional touch to your repository.  
 
-## 📌 Overview  
-The **Advanced Face Mask Detection System** is an AI-based project that automatically detects whether a person is wearing a mask or not in real-time. This system is built using **Python, OpenCV, TensorFlow, and Deep Learning** to enhance public safety by ensuring compliance with mask-wearing policies.
+---
 
-## 🚀 Features  
-✅ Real-time face mask detection using webcam  
-✅ Supports multiple mask types (cloth masks, scarves, hijabs, niqabs, traditional beard coverings)  
-✅ Deep learning-based CNN model for high accuracy  
-✅ Lightweight and efficient for real-time applications  
-✅ Works with images, live video streams, and recorded video  
-✅ Displays detection results on-screen  
+## **📌 Face Mask Detection System**
+This project is a **real-time Face Mask Detection System** that detects whether a person is wearing a mask or not using **Deep Learning and OpenCV**. The system utilizes a **Convolutional Neural Network (CNN)** model trained on image datasets and integrated with OpenCV for face detection.
 
-## 📂 Project Structure  
+---
+
+## **🚀 Features**
+✔️ **Real-time detection** using a webcam  
+✔️ **Pre-trained MobileNetV2 model** for mask classification  
+✔️ **Face detection with OpenCV**  
+✔️ **Custom dataset support** for improved accuracy  
+✔️ **Fast and lightweight model** suitable for edge devices  
+
+---
+
+## **📂 Project Structure**
 ```
-📦 Face-Mask-Detection
-│-- 📁 dataset          # Dataset containing masked and unmasked images
-│-- 📁 models           # Trained deep learning models
-│-- 📁 utils            # Helper scripts for preprocessing
-│-- 📁 results          # Output results & logs
-│-- 📜 app.py           # Main application script
-│-- 📜 train.py         # Model training script
-│-- 📜 detect.py        # Face mask detection script
-│-- 📜 requirements.txt # Dependencies
-│-- 📜 README.md        # Project documentation
+Face-Mask-Detection/
+│── dataset/                  # Image dataset (Masked & Unmasked faces)
+│── models/                   # Trained models (mask_recog.h5)
+│── haarcascade_frontalface_alt2.xml  # OpenCV face detection model
+│── face_mask_detection.py     # Main script for detection
+│── train_model.py             # Script for training the CNN model
+│── requirements.txt           # Required dependencies
+│── README.md                  # Project documentation
 ```
 
-## 🛠️ Tech Stack Used  
-- **Python** 🐍  
-- **OpenCV** 👀 (Image Processing)  
-- **TensorFlow / Keras** 🤖 (Deep Learning)  
-- **CNN (Convolutional Neural Network)** 🔥  
-- **Matplotlib & NumPy** 📊  
+---
 
-## 🔄 Project Workflow  
-1️⃣ **Data Preprocessing Phase**  
-   - Collected images of masked and unmasked faces  
-   - Augmented dataset to improve model generalization  
-   - Resized and normalized images  
+## **🛠️ Technologies Used**
+- **Python**  
+- **OpenCV** (for real-time face detection)  
+- **TensorFlow/Keras** (for deep learning model)  
+- **MobileNetV2** (for efficient image classification)  
+- **NumPy & Pandas** (for data processing)  
 
-2️⃣ **Model Development Phase**  
-   - Designed a CNN model for classification  
-   - Trained the model with labeled dataset  
-   - Optimized accuracy and reduced false detections  
+---
 
-3️⃣ **Testing & Implementation Phase**  
-   - Deployed the model for real-time detection  
-   - Evaluated performance with different lighting conditions  
-   - Improved detection for various mask types  
-
-## 🖥️ Installation Guide  
+## **📥 Installation**
 1️⃣ **Clone the repository**  
 ```bash
 git clone https://github.com/yourusername/Face-Mask-Detection.git
@@ -60,44 +51,53 @@ cd Face-Mask-Detection
 pip install -r requirements.txt
 ```
 
-3️⃣ **Run the detection script**  
+3️⃣ **Run the real-time face mask detection**  
 ```bash
-python detect.py
+python face_mask_detection.py
 ```
 
-## 📌 How It Works  
-1. The system captures live video from the webcam  
-2. It detects faces using OpenCV’s face detection algorithm  
-3. The trained CNN model classifies whether a mask is present or not  
-4. The result is displayed on the screen with a bounding box  
+---
 
-## 🎯 Applications  
-📌 Public places like airports, malls, and hospitals  
-📌 Offices and workplaces for safety compliance  
-📌 Integration with CCTV for automated surveillance  
-📌 Can be extended for other PPE detection (helmets, gloves)  
+## **🖥️ How It Works?**
+1. **Face detection**: The system detects faces using OpenCV’s Haar Cascade Classifier.  
+2. **Preprocessing**: The detected face is resized and normalized.  
+3. **Prediction**: The CNN model classifies whether the face has a mask or not.  
+4. **Result display**: The result is shown on the screen with a bounding box (green for masks, red for no masks).  
 
-## 🚀 Future Scope  
-📌 **Enhanced Mask Detection** – Recognizing different types of face coverings  
-📌 **Mobile App Integration** – Deploying the model on mobile devices  
-📌 **Edge AI Implementation** – Running on low-power devices (Raspberry Pi)  
+---
 
-## 🛑 Limitations  
-❌ May struggle with poor lighting conditions  
-❌ Limited dataset might affect accuracy in rare cases  
-❌ Works best with frontal face orientation  
-  
+## **📊 Dataset**
+- The model was trained using a **custom dataset** containing images of masked and unmasked faces.  
+- Dataset source: Kaggle, RMFD, and self-curated images.  
 
-## 📜 License  
-This project is **open-source** under the [MIT License](LICENSE).  
+---
 
-## 🤝 Contributing  
-Pull requests are welcome! If you find issues, feel free to raise an **issue** in the repository.  
+## **🔬 Model Training**
+- We used a **Convolutional Neural Network (CNN)** based on **MobileNetV2** for efficient classification.  
+- The model was trained using **Keras and TensorFlow** with **Adam optimizer** and **categorical cross-entropy loss**.  
 
-## ⭐ Acknowledgments  
-Special thanks to **TensorFlow, OpenCV, and Kaggle datasets** for enabling this project!  
+---
 
----  
-🚀 **Like this project? Give it a ⭐ on GitHub!**  
+## **📸 Sample Output**
+![Demo](https://github.com/yourusername/Face-Mask-Detection/blob/main/sample_output.png)  
 
-```
+---
+
+## **📌 Future Enhancements**
+- Improve **accuracy** by training on a larger dataset.  
+- Optimize model for **faster inference** on edge devices.  
+- Extend support for **different types of face coverings** like scarves and niqabs.  
+
+---
+
+## **📜 License**
+This project is open-source under the **MIT License**.  
+
+---
+
+## **📧 Contact**
+🔹 **Developer**: Mohd Aqib Idreeshi
+🔹 **GitHub**: https://github.com/cleancode25
+🔹 **Email**: mdaqib10487@gmail.com
+
+---
