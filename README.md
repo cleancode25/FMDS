@@ -1,7 +1,3 @@
-Here's a well-structured **README.md** file for your **Face Mask Detection System** project. You can upload this on GitHub to give a professional touch to your repository.  
-
----
-
 ## **📌 Face Mask Detection System**
 This project is a **real-time Face Mask Detection System** that detects whether a person is wearing a mask or not using **Deep Learning and OpenCV**. The system utilizes a **Convolutional Neural Network (CNN)** model trained on image datasets and integrated with OpenCV for face detection.
 
